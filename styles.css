@@ -6,7 +6,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-image: url("images/background-floor-shadow-wall-kitchen-concrete-white-texture-light-texture-abstract-mockup.png");
+  background-image: url("images/dark-blue-star-redvcz0dcq724okj.png");
   background-size: cover;
 }
 
@@ -16,11 +16,55 @@ body {
   width: 30vw; /*vw and vh for responsivenes*/
   height: 30vw;
   padding: 5%;
-  border: 0.5vw solid black;
+  border: 0.8vw solid rgb(255, 255, 255);
   border-radius: 50%;
-  background-image: linear-gradient(rgb(4, 234, 255), rgb(9, 47, 67)); /*fade of colours*/
-  box-shadow: 0 0 3vw rgba(0, 0, 0, 0.2); /*shadow of clock*/
+  background: rgb(4, 234, 255);
+  box-shadow: 0 0 8vw rgb(255, 255, 255); /*shadow of clock*/
 }
+/*? Display the hour markings ?*/
+.marking {
+  position: absolute;
+  width: 2%;
+  height: 35%;
+  background: black;
+  top: 15%;
+  left: 49.25%;
+  transform-origin: center bottom;
+  border-radius: 2px;
+}
+
+.adjustMarking {
+  position: absolute;
+  width: 3%;
+  height: 27.5%;
+  background: rgb(4, 234, 255);
+  top: 22.5%;
+  left: 49%;
+  transform-origin: center bottom;
+}
+
+/*? Display the minute markings ?*/
+.minute-marking {
+  z-index: 0;
+  position: absolute;
+  width: 1%;
+  height: 34.5%;
+  background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+  top: 15.55%;
+  left: 49.5%;
+  transform-origin: center bottom;
+}
+
+.adjustMinuteMarking {
+  position: absolute;
+  width: 2.1%;
+  height: 32.5%;
+  background:rgb(4, 234, 255);
+  top: 17.5%;
+  left: 49.25%;
+  transform-origin: center bottom;
+}
+
 
 /*black dot in the center*/
 .clock::after {
@@ -28,10 +72,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 7%;
-  height: 7%;
-  background-color: black;
-  border-radius: 50%;
+  width: 6%;
+  height: 6%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30%;
   transform: translate(-50%, -50%);
   z-index: 11;
 }
@@ -52,26 +96,46 @@ body {
   transform-origin: 100%; /*rotation origin on the end of the handle*/
   transform: rotate(90deg); /*standart rotation*/
   transition: all 0.01s /*smooth movement when ticking*/
-  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); /*transition curve*/
+  
 }
 
 /*dimensions and colour of hour-hand*/
 .hour-hand {
   width: 30%;
   height: 3%;
-  left: 21%;
-  background: rgb(43, 33, 84);
+  left: 20%;
+  background: rgb(105, 46, 234);
+  z-index: 1;
 }
 /*dimensions and colour of min-hand*/
 .min-hand {
   width: 35%;
   height: 2%;
   left: 16%;
+  z-index: 1;
+  background: rgb(54, 95, 126);
 }
 /*dimensions and colour of second-hand*/
 .second-hand {
   width: 40%;
   height: 1%;
-  left: 11%;
-  background: rgb(159, 1, 238);
+  left: 9.75%;
+  background: rgb(8, 148, 255);
+  z-index: 1;
+}
+
+.marking-one {
+  display: none;
+}
+
+.marking-two {
+  display: none;
+}
+
+.marking-three {
+  display: none;
+}
+
+.marking-four {
+  display: none;
 }

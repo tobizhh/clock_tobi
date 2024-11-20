@@ -4,6 +4,7 @@ const minuteHand = document.querySelector('.min-hand');
 const secondHand = document.querySelector('.second-hand');
 
 
+
 //function to sync hands with time//
 function setDate() {
     const now = new Date(); //current date and time//
@@ -26,3 +27,41 @@ setInterval(setDate, 1000);
 
 //call function//
 setDate();
+
+const clock = document.querySelector(".clock");
+
+//? Add hour markings
+for (let i = 0; i < 12; i++) {
+    const hourMark = document.createElement("div");
+    hourMark.classList.add("marking");
+    hourMark.style.transform = `rotate(${i * 30}deg) translate(0, -45%)`;
+    clock.appendChild(hourMark);
+}
+
+//? Adjust the hour markings
+for (let i = 0; i < 12; i++) {
+    const hourMark = document.createElement("div");
+    hourMark.classList.add("adjustMarking");
+    hourMark.style.transform = `rotate(${i * 30}deg) translate(0, -45%)`;
+    clock.appendChild(hourMark);
+}
+
+//? Add minute markings
+for (let i = 0; i < 60; i++) {
+    if (i % 5 !== 0) {
+        const minuteMark = document.createElement("div");
+        minuteMark.classList.add("minute-marking");
+        minuteMark.style.transform = `rotate(${i * 6}deg) translate(0, -45%)`;
+        clock.appendChild(minuteMark);
+    }
+}
+
+//? Adjust the minute markings
+for (let i = 0; i < 60; i++) {
+    if (i % 5 !== 0) {
+        const minuteMark = document.createElement("div");
+        minuteMark.classList.add("adjustMinuteMarking");
+        minuteMark.style.transform = `rotate(${i * 6}deg) translate(0, -45%)`;
+        clock.appendChild(minuteMark);
+    }
+}
