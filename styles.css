@@ -79,7 +79,7 @@ body {
 
 
 
-/* Black dot in the center */
+/* black dot in the center */
 .clock::after {
   content: '';
   position: absolute;
