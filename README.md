@@ -4,6 +4,8 @@ Dieses Projekt beinhaltet eine analoge Uhr, die ausschließlich mit **JavaScript
 
 ## Projektbeschreibung
 
+Take a look at it: https://tobizhh.github.io/clock_tobi/
+
 ### Ursprüngliche Aufgabe
 
 - Die Uhr hat **drei Zeiger** und zeigt die aktuelle Zeit korrekt an:
