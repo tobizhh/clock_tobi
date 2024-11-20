@@ -62,6 +62,7 @@ const digitalClock = document.createElement('div');
 digitalClock.id = 'digital-clock';
 clock.appendChild(digitalClock);
 
+//function to fetch real time and display it//
 function showDigitalTime() {
     const now = new Date();
     let h = now.getHours();
@@ -77,4 +78,4 @@ function showDigitalTime() {
 }
 
 setInterval(showDigitalTime, 1000);
-showDigitalTime();
+showDigitalTime(); // Call the function//

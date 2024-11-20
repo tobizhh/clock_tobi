@@ -64,6 +64,7 @@ body {
   transform-origin: center bottom;
 }
 
+/* fix to get rid of unwanted line*/
 .marking-one {
   display: none;
 }
@@ -76,8 +77,6 @@ body {
 .marking-four {
   display: none;
 }
-
-
 
 /* black dot in the center */
 .clock::after {
@@ -150,7 +149,7 @@ body {
   font-size: 2vw;
   font-weight: 900;
   color: white;
-  -webkit-text-stroke: 0.15vw black; /* Schwarzer Rand */
+  -webkit-text-stroke: 0.15vw black; /* black outline */
   letter-spacing: 0.3em;
   z-index: 15;
 }
