@@ -56,4 +56,4 @@ Dieses Projekt demonstriert die Leistungsfähigkeit von **JavaScript** und **CSS
 - [W3SCHOOLS](https://www.w3schools.com/)
 - [STACKOVERFLOW](https://stackoverflow.com/)
 - [CHATGTP](https://chatgpt.com/)
-Help by: Matteo Cipriani.
+Help with minutedisplay: Matteo Cipriani.
