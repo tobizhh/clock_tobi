@@ -13,7 +13,7 @@ body {
 /*container for clock / add background for clock/ add border /set properties */
 .clock {
   position: relative;
-  width: 30vw; /*vw and vh for responsiveness*/
+  width: 30vw; /*vw and vh for responsivenes*/
   height: 30vw;
   padding: 5%;
   border: 0.5vw solid black;
