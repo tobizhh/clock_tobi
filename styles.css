@@ -1,72 +1,77 @@
-/* styles.css */
+
+/*define properties for body and add background*/
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
   background-image: url("images/background-floor-shadow-wall-kitchen-concrete-white-texture-light-texture-abstract-mockup.png");
   background-size: cover;
-  margin: 0;
 }
 
+/*container for clock / add background for clock/ add border /set properties */
 .clock {
-  width: 300px;
-  height: 300px;
-  border: 10px solid black;
-  border-radius: 50%;
   position: relative;
-  padding: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  background-color: rgb(87, 102, 101);
+  width: 30vw; /*vw and vh for responsiveness*/
+  height: 30vw;
+  padding: 5%;
+  border: 0.5vw solid black;
+  border-radius: 50%;
+  background-image: linear-gradient(rgb(4, 234, 255), rgb(9, 47, 67)); /*fade of colours*/
+  box-shadow: 0 0 3vw rgba(0, 0, 0, 0.2); /*shadow of clock*/
 }
 
+/*black dot in the center*/
+.clock::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7%;
+  height: 7%;
+  background-color: black;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+}
+
+/*clock face (Ziffernblatt)*/
 .clock-face {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
+/*common properties for all hands*/
 .hand {
-  width: 46%;
-  background: black;
   position: absolute;
   top: 50%;
-  transform-origin: 100%;
-  transform: rotate(90deg);
-  transition: all 0.01s;
-  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  width: 46%;
+  background: rgb(41, 70, 186);
+  transform-origin: 100%; /*rotation origin on the end of the handle*/
+  transform: rotate(90deg); /*standart rotation*/
+  transition: all 0.01s /*smooth movement when ticking*/
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); /*transition curve*/
 }
 
+/*dimensions and colour of hour-hand*/
 .hour-hand {
   width: 30%;
   height: 3%;
   left: 21%;
+  background: rgb(43, 33, 84);
 }
-
+/*dimensions and colour of min-hand*/
 .min-hand {
-  width: 35% ;
-  height: 2%; 
+  width: 35%;
+  height: 2%;
   left: 16%;
 }
-
+/*dimensions and colour of second-hand*/
 .second-hand {
   width: 40%;
   height: 1%;
-  background: red;
   left: 11%;
-}
-
-
-
-.clock::after{
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 20px;
-	height: 20px;
-	background-color: black;
-	z-index: 11;
-	border-radius: 50%;
+  background: rgb(159, 1, 238);
 }
