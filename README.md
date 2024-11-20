@@ -49,3 +49,11 @@ Die Uhr wurde erfolgreich erstellt und erfüllt alle gestellten Anforderungen:
 ## Fazit
 
 Dieses Projekt demonstriert die Leistungsfähigkeit von **JavaScript** und **CSS**, um eine dynamische und interaktive Komponente zu erstellen, ohne das zugrunde liegende HTML anzupassen. Es ist ein Beispiel für durchdachtes, sauberes und standardkonformes Webdesign.
+
+## Quellen
+
+- [CODEPEN](https://codepen.io/afarrar/pen/JRaEjP)
+- [W3SCHOOLS](https://www.w3schools.com/)
+- [STACKOVERFLOW](https://stackoverflow.com/)
+- [CHATGTP](https://chatgpt.com/)
+Help by: Matteo Cipriani.
