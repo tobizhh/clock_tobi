@@ -1,18 +1,13 @@
-//explain purpose of each hand//
 const hourHand = document.querySelector('.hour-hand'); 
 const minuteHand = document.querySelector('.min-hand');
 const secondHand = document.querySelector('.second-hand');
 
-
-
-//function to sync hands with time//
 function setDate() {
-    const now = new Date(); //current date and time//
-    //calculate seconds and their rotation in degres//
+    const now = new Date();
     const seconds = now.getSeconds();
-    const secondsDegrees = ((seconds / 60) * 360) + 90; //calculate to degrees and offset by 90 to align start position//
-    secondHand.style.transform = `rotate(${secondsDegrees}deg)`; //rotation of second-hand//
-    
+    const secondsDegrees = ((seconds / 60) * 360) + 90;
+    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
     const minutes = now.getMinutes();
     const minutesDegrees = ((minutes / 60) * 360) + ((seconds / 60) * 6) + 90;
     minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
@@ -22,10 +17,7 @@ function setDate() {
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
 }
 
-//intervall to update every second//
 setInterval(setDate, 1000);
-
-//call function//
 setDate();
 
 const clock = document.querySelector(".clock");
@@ -65,3 +57,24 @@ for (let i = 0; i < 60; i++) {
         clock.appendChild(minuteMark);
     }
 }
+
+const digitalClock = document.createElement('div');
+digitalClock.id = 'digital-clock';
+clock.appendChild(digitalClock);
+
+function showDigitalTime() {
+    const now = new Date();
+    let h = now.getHours();
+    let m = now.getMinutes();
+    let s = now.getSeconds();
+
+    h = h < 10 ? '0' + h : h;
+    m = m < 10 ? '0' + m : m;
+    s = s < 10 ? '0' + s : s;
+
+    const time = `${h}:${m}:${s}`;
+    digitalClock.textContent = time;
+}
+
+setInterval(showDigitalTime, 1000);
+showDigitalTime();
